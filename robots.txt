@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vianson50.github.io/travelpro-landing/sitemap.xml
