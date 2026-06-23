@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelPro Ivory — Gestion d'agences de voyage en Côte d'Ivoire</title>
+    <meta name="description" content="La plateforme tout-en-un pour les agences de voyage : facturation, paiements mobiles, rapprochement bancaire. Essai gratuit 15 jours.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <style>
+        html { scroll-behavior: smooth; }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        .float { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+<!-- ============ NAVBAR ============ -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="#" class="flex items-center gap-2 font-bold text-xl">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white text-lg shadow-lg">✈️</span>
+                <span>TravelPro <span class="text-blue-600">Ivory</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#fonctionnalites" class="hover:text-blue-600 transition">Fonctionnalités</a>
+                <a href="#tarifs" class="hover:text-blue-600 transition">Tarifs</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://travelpro-ivory.online/" class="hidden sm:inline-block text-sm font-medium text-gray-600 hover:text-blue-600 transition">Se connecter</a>
+                <a href="https://travelpro-ivory.online/register.php" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-lg shadow-blue-600/30 transition">Essai gratuit</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="relative pt-32 pb-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 overflow-hidden">
+    <!-- Decorative shapes -->
+    <div class="absolute top-20 right-10 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-50 text-sm font-medium mb-6 backdrop-blur-sm">
+            🇨🇮 Conçu pour les agences de voyage en Côte d'Ivoire
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl mx-auto">
+            Gérez votre agence de voyage<br>avec <span class="text-blue-200">simplicité</span>
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+            Facturation, paiements mobiles, gestion clients et rapprochement bancaire —
+            tout réuni dans une seule plateforme. <strong class="text-white">Essai gratuit de 15 jours.</strong>
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://travelpro-ivory.online/register.php" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-blue-700 font-bold text-lg shadow-2xl hover:scale-105 transition transform">
+                Démarrer gratuitement →
+            </a>
+            <a href="#fonctionnalites" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 border border-white/30 text-white font-semibold text-lg backdrop-blur-sm hover:bg-white/20 transition">
+                Découvrir les fonctionnalités
+            </a>
+        </div>
+        <p class="mt-6 text-sm text-blue-200">
+            ✓ Aucune carte requise &nbsp;&nbsp; ✓ Configuration en 5 minutes &nbsp;&nbsp; ✓ Annulable à tout moment
+        </p>
+    </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="py-12 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-blue-600">15 j</div>
+                <div class="mt-1 text-sm text-gray-500 font-medium">Essai gratuit</div>
+            </div>
+            <div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-blue-600">100%</div>
+                <div class="mt-1 text-sm text-gray-500 font-medium">Conçu pour la CI</div>
+            </div>
+            <div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-blue-600">3</div>
+                <div class="mt-1 text-sm text-gray-500 font-medium">Moyens de paiement</div>
+            </div>
+            <div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-blue-600">24/7</div>
+                <div class="mt-1 text-sm text-gray-500 font-medium">Disponible</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FONCTIONNALITES ============ -->
+<section id="fonctionnalites" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Tout ce dont votre agence a besoin</h2>
+            <p class="mt-4 text-lg text-gray-500">Une plateforme complète qui remplace vos tableurs et vos logiciels dispersés.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl mb-5">🧾</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Facturation professionnelle</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Créez des factures en quelques clics avec TVA configurée. Impression PDF, suivi des paiements et relances automatiques.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center text-2xl mb-5">📱</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Paiements mobiles</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Acceptez Orange Money, MTN MoMo et Moov Money directement. Intégration Paystack et CinetPay sécurisée.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center text-2xl mb-5">👥</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Gestion des clients</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Base de données centralisée avec historique des achats, soldes et crédits. Gérez vos voyageurs efficacement.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center text-2xl mb-5">🏦</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Rapprochement bancaire</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Comparez automatiquement vos reçus bancaires avec vos enregistrements. Plus aucun écart non détecté.</p>
+            </div>
+            <!-- Feature 5 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-2xl mb-5">📊</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Rapports & statistiques</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Tableau de bord en temps réel : chiffre d'affaires, soldes compagnies aériennes, trésorerie et exports comptables.</p>
+            </div>
+            <!-- Feature 6 -->
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-pink-50 flex items-center justify-center text-2xl mb-5">📱</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Application installable</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Installez TravelPro sur votre ordinateur ou mobile comme une vraie application. Fonctionne même hors-ligne.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ COMMENT CA MARCHE ============ -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Démarrez en 3 étapes</h2>
+            <p class="mt-4 text-lg text-gray-500">De l'inscription au premier billet, en moins de 10 minutes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white text-2xl font-bold shadow-lg mb-5">1</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Créez votre compte</h3>
+                <p class="text-gray-500 text-sm">Inscrivez votre agence, vérifiez votre e-mail. Votre essai de 15 jours démarre immédiatement.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white text-2xl font-bold shadow-lg mb-5">2</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Configurez vos outils</h3>
+                <p class="text-gray-500 text-sm">Ajoutez vos informations, connectez votre compte de paiement mobile, créez vos premiers clients.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white text-2xl font-bold shadow-lg mb-5">3</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Facturez et encaissez</h3>
+                <p class="text-gray-500 text-sm">Émettez vos billets, recevez les paiements mobiles, suivez votre trésorerie en temps réel.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TARIFS ============ -->
+<section id="tarifs" class="py-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Une tarification simple et transparente</h2>
+            <p class="mt-4 text-lg text-gray-500">Pas de frais cachés. Annulable à tout moment.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <!-- Essai gratuit -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border-2 border-gray-100 flex flex-col">
+                <div class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Découverte</div>
+                <div class="flex items-baseline gap-1 mb-6">
+                    <span class="text-5xl font-extrabold text-gray-900">Gratuit</span>
+                    <span class="text-gray-400">/ 15 jours</span>
+                </div>
+                <p class="text-gray-500 text-sm mb-6">Toutes les fonctionnalités débloquées. Aucune carte requise.</p>
+                <ul class="space-y-3 text-sm text-gray-600 mb-8 flex-grow">
+                    <li class="flex items-start gap-3"><span class="text-green-500 font-bold">✓</span> Facturation illimitée</li>
+                    <li class="flex items-start gap-3"><span class="text-green-500 font-bold">✓</span> Gestion des clients</li>
+                    <li class="flex items-start gap-3"><span class="text-green-500 font-bold">✓</span> Paiements mobiles</li>
+                    <li class="flex items-start gap-3"><span class="text-green-500 font-bold">✓</span> Rapports et statistiques</li>
+                </ul>
+                <a href="https://travelpro-ivory.online/register.php" class="block text-center w-full py-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold transition">Commencer l'essai</a>
+            </div>
+
+            <!-- Abonnement mensuel -->
+            <div class="relative bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 shadow-2xl flex flex-col text-white">
+                <div class="absolute -top-3 right-8 px-3 py-1 rounded-full bg-orange-400 text-orange-900 text-xs font-bold">POPULAIRE</div>
+                <div class="text-sm font-semibold text-blue-200 uppercase tracking-wide mb-4">Abonnement</div>
+                <div class="flex items-baseline gap-1 mb-6">
+                    <span class="text-5xl font-extrabold">120 000</span>
+                    <span class="text-blue-200">FCFA / mois</span>
+                </div>
+                <p class="text-blue-100 text-sm mb-6">Toutes les fonctionnalités, sans limite. Renouvellement mensuel.</p>
+                <ul class="space-y-3 text-sm text-blue-50 mb-8 flex-grow">
+                    <li class="flex items-start gap-3"><span class="text-blue-300 font-bold">✓</span> Tout ce qui est inclus dans l'essai</li>
+                    <li class="flex items-start gap-3"><span class="text-blue-300 font-bold">✓</span> Utilisateurs illimités</li>
+                    <li class="flex items-start gap-3"><span class="text-blue-300 font-bold">✓</span> Rapprochement bancaire</li>
+                    <li class="flex items-start gap-3"><span class="text-blue-300 font-bold">✓</span> Export comptable</li>
+                    <li class="flex items-start gap-3"><span class="text-blue-300 font-bold">✓</span> Support prioritaire</li>
+                </ul>
+                <a href="https://travelpro-ivory.online/register.php" class="block text-center w-full py-3.5 rounded-xl bg-white text-blue-700 font-bold hover:scale-105 transition transform">Choisir ce plan →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Questions fréquentes</h2>
+        </div>
+
+        <div class="space-y-4">
+            <details class="group bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 list-none">
+                    Ai-je besoin d'une carte bancaire pour l'essai ?
+                    <span class="text-blue-600 text-xl group-open:rotate-45 transition">+</span>
+                </summary>
+                <p class="mt-3 text-gray-500 text-sm leading-relaxed">Non. L'essai de 15 jours est entièrement gratuit et ne demande aucune carte. À la fin de l'essai, vous choisissez si vous souhaitez souscrire à l'abonnement.</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 list-none">
+                    Quels moyens de paiement sont acceptés ?
+                    <span class="text-blue-600 text-xl group-open:rotate-45 transition">+</span>
+                </summary>
+                <p class="mt-3 text-gray-500 text-sm leading-relaxed">Nous acceptons Orange Money, MTN MoMo, Moov Money via CinetPay et Paystack. Vos clients peuvent payer directement en ligne depuis leur mobile.</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 list-none">
+                    Mes données sont-elles sécurisées ?
+                    <span class="text-blue-600 text-xl group-open:rotate-45 transition">+</span>
+                </summary>
+                <p class="mt-3 text-gray-500 text-sm leading-relaxed">Oui. Toutes les données sont chiffrées (AES-256), hébergées sur un serveur sécurisé avec HTTPS. Chaque agence a un espace isolé (multi-tenant). Vos clés API sont chiffrées en base.</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 list-none">
+                    Puis-je utiliser TravelPro sur mobile ?
+                    <span class="text-blue-600 text-xl group-open:rotate-45 transition">+</span>
+                </summary>
+                <p class="mt-3 text-gray-500 text-sm leading-relaxed">Oui. TravelPro est une PWA (Progressive Web App). Vous pouvez l'installer sur votre téléphone, tablette ou ordinateur comme une vraie application, et elle fonctionne même partiellement hors-ligne.</p>
+            </details>
+            <details class="group bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <summary class="flex items-center justify-between cursor-pointer font-semibold text-gray-900 list-none">
+                    Que se passe-t-il à la fin de l'essai ?
+                    <span class="text-blue-600 text-xl group-open:rotate-45 transition">+</span>
+                </summary>
+                <p class="mt-3 text-gray-500 text-sm leading-relaxed">Vos données sont conservées et accessibles en lecture. Pour continuer à créer des factures et encaisser des paiements, souscrivez à l'abonnement mensuel (120 000 FCFA/mois).</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Prêt à digitaliser votre agence ?</h2>
+        <p class="mt-6 text-lg text-blue-100 max-w-2xl mx-auto">Rejoignez les agences de voyage modernes. Commencez gratuitement aujourd'hui, sans carte bancaire.</p>
+        <a href="https://travelpro-ivory.online/register.php" class="mt-10 inline-block px-10 py-4 rounded-xl bg-white text-blue-700 font-bold text-lg shadow-2xl hover:scale-105 transition transform">
+            Créer mon compte gratuit →
+        </a>
+        <p class="mt-6 text-sm text-blue-200">⏱️ Configuration en 5 minutes — 🎁 15 jours d'essai gratuit</p>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-gray-900 text-gray-400 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-2 font-bold text-xl text-white mb-4">
+                    <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-lg">✈️</span>
+                    TravelPro Ivory
+                </div>
+                <p class="text-sm leading-relaxed max-w-md">La plateforme de gestion tout-en-un pour les agences de voyage en Côte d'Ivoire. Facturation, paiements mobiles et comptabilité réunis.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4 text-sm">Produit</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#fonctionnalites" class="hover:text-white transition">Fonctionnalités</a></li>
+                    <li><a href="#tarifs" class="hover:text-white transition">Tarifs</a></li>
+                    <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="https://travelpro-ivory.online/register.php" class="hover:text-white transition">Essai gratuit</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4 text-sm">Compte</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://travelpro-ivory.online/register.php" class="hover:text-white transition">S'inscrire</a></li>
+                    <li><a href="https://travelpro-ivory.online/" class="hover:text-white transition">Se connecter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm">
+            <p>&copy; 2026 TravelPro Ivory. Tous droits réservés. Fait avec ❤️ en Côte d'Ivoire 🇨🇮</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
